@@ -4,7 +4,7 @@ service:
   variables:
     path_to_source_code: /backend
   environment:
-    - APP_KEY
+    - SECRET_KEY
 
 public_endpoints:
   - name: web
