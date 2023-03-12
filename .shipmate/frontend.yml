@@ -1,0 +1,19 @@
+api: v1
+service:
+  name: frontend
+  type: serverless/nuxtjs:1.0.0
+  variables:
+    path_to_source_code: /frontend
+    package_manager: yarn
+    web_worker_config:
+      memory: 1024
+      memory_per_request: 30
+      maximum_instances: 1
+      timeout: 10
+  environment:
+    - BACKEND_BASE_URL
+public_endpoints:
+  - name: web
+    alias: web
+    target:
+      worker: web
