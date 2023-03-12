@@ -1,0 +1,10 @@
+service:
+  name: backend
+  type: django:1.0.0
+  variables:
+    path_to_source_code: /backend
+  environment:
+    - APP_KEY
+
+public_endpoints:
+  - name: web
