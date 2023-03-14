@@ -3,6 +3,8 @@ service:
   type: dev:django:latest
   variables:
     path_to_source_code: /backend
+    python_version: 3.11
+    wsgi_app: backend
   environment:
     - SECRET_KEY
 
