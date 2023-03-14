@@ -1,6 +1,6 @@
 service:
   name: backend
-  type: django:1.0.0
+  type: dev:django:latest
   variables:
     path_to_source_code: /backend
   environment:
