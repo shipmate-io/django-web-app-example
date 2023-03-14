@@ -1,23 +1,21 @@
 from django.http import JsonResponse
-
+from django.templatetags.static import static
 
 def index(request):
     languages = [
         'Javascript',
         'Python',
         'Go',
-        'Java',
-        'Kotlin',
+        'Ruby',
         'PHP',
-        'C#',
-        'Swift',
     ]
 
     response = []
 
     for language in languages:
         response.append({
-            'name': language
+            'name': language,
+            'logo': request.build_absolute_uri(static(language.lower() + '.svg'))
         })
 
     return JsonResponse(response, safe=False)
