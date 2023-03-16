@@ -1,12 +1,10 @@
 service:
   name: backend
-  type: dev:django:latest
+  type: django:1.1
   variables:
     path_to_source_code: /backend
-    python_version: 3.11
     wsgi_app: backend
   environment:
     - SECRET_KEY
-
 public_endpoints:
   - name: web

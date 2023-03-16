@@ -1,11 +1,11 @@
 service:
   name: frontend
-  type: nuxtjs:1.0.0
+  type: nuxtjs:1.1
   variables:
     path_to_source_code: /frontend
+    nodejs_version: 16
     package_manager: yarn
   environment:
     - BACKEND_BASE_URL
-
 public_endpoints:
   - name: web
